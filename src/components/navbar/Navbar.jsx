@@ -1,26 +1,33 @@
-import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import Home from '../home/Home'
 export default function Navbar() {
-    const navigate = useNavigate;
+    const navigate = useNavigate();
+    const image_link = "https://static.vecteezy.com/system/resources/previews/022/123/337/original/user-icon-profile-icon-account-icon-login-sign-line-vector.jpg";
   return (
     <div>
-      <div className="navbar navbar-expand-lg navbar-primary">
+      <nav className="navbar navbar-expand-lg navbar-primary">
 
-        <a href="/home" className='navbar-brand'>EMS</a>
+        <Link to="/" className='navbar-brand'>EMS</Link>
         
         <ul className= "navbar-nav mr-auto" >
-            <li className='nabarBtn' onClick={() => navigate("/")}>Home</li>
-            <li className='nabarBtn' onClick={() => navigate("/addEmp")}>Add Employee</li>
-            <li className='nabarBtn' onClick={() => navigate("/About")}>About Us</li>
+            <li className='nav-item btn btn-link text-decoration-none mx-2 text-primary' onClick={() => navigate("/")}>Home</li>
+            <li className='nav-item btn btn-link text-decoration-none mx-2 text-primary' onClick={() => navigate("/About")}>AboutUs</li>
+            <li className='nav-item btn btn-link text-decoration-none mx-2 text-primary' onClick={() => navigate("/addEmp")}>Add Employee</li>
         </ul>
 
-        <div className="navbar-toggler" type = 'button' data-toggle = 'collapse'>
+        <div className="dropdown">
+            <img src = {image_link} alt="profile_image" type = 'button' height="40" width="40" className='dropdown-toggle rounded-circle' data-bs-toggle= "dropdown" />
+
+            <ul className="dropdown-menu">
+              <li className='dropdown-item text-decoration-none'><Link to = "/login">Login</Link></li>
+              <li className='dropdown-item text-decoration-none'><Link to = "/register">Register</Link></li>
+              <li className='dropdown-item text-decoration-none'><Link to = "/help">Help</Link></li>
+              <li className='dropdown-item'>LogOut</li>
+            </ul>
 
         </div>
 
 
-      </div>
+      </nav>
     </div>
   )
 }

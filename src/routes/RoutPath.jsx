@@ -12,6 +12,7 @@ export default function RoutPath() {
             <Route path = "/" element = {<Home />}/>
             <Route path = "/login" element = {<Login />}/>
             <Route path = "/about" element = {<About />}/>
+            <Route path = "/help" element = {<Help/>}/>
             <Route path = "/register" element = {<Register />}/>
             <Route path = "/addEmp" element = {<AddEmp />}/>
             <Route path = "/updateEmp" element = {<UpdateEmp />}/>

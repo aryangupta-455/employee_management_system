@@ -1,13 +1,7 @@
-// import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './about.css';
-import Navbar from '../navbar/Navbar';
-import Footer from '../footer/Footer';
-
-const AboutUs = () => {
+// import 'bootstrap/dist/css/bootstrap.min.css';
+const About = () => {
     return (
         <>
-            <Navbar />
             <div className="container about-us">
                 <h2>About Us</h2>
                 <p>
@@ -31,9 +25,8 @@ const AboutUs = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </>
     );
 };
 
-export default AboutUs;
+export default About;
