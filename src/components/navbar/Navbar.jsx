@@ -11,7 +11,7 @@ export default function Navbar() {
         
           <ul className= "navbar-nav mx-auto mb-2 mb-lg-0">
             <li className='nav-item btn btn-link text-decoration-none mx-2 text-light fw-semibold' onClick={() => navigate("/")}>Home</li>
-            <li className='nav-item btn btn-link text-decoration-none mx-2 text-light fw-semibold' onClick={() => navigate("/About")}>AboutUs</li>
+            <li className='nav-item btn btn-link text-decoration-none mx-2 text-light fw-semibold' onClick={() => navigate("/about")}>AboutUs</li>
             <li className='nav-item btn btn-link text-decoration-none mx-2 text-light fw-semibold' onClick={() => navigate("/addEmp")}>Add Employee</li>
           </ul>
 
@@ -19,9 +19,9 @@ export default function Navbar() {
             <img src = {image_link} alt="profile_image" type = 'button' height="40" width="40" className='dropdown-toggle  rounded-circle' data-bs-toggle= "dropdown"  aria-expanded="false" />
 
             <ul className="dropdown-menu dropdown-menu-end">
-              <li className='dropdown-item '><Link to = "/login" className='text-decoration-none text-dark fw-semibold'>Login</Link></li>
-              <li className='dropdown-item'><Link to = "/register" className='text-decoration-none text-dark fw-semibold'>Register</Link></li>
-              <li className='dropdown-item'><Link to = "/help" className='text-decoration-none text-dark fw-semibold'>Help</Link></li>
+              <Link to = "/login" className='text-decoration-none text-dark fw-semibold dropdown-item'>Login</Link>
+              <Link to = "/register" className='text-decoration-none text-dark fw-semibold dropdown-item '>Register</Link>
+              <Link to = "/help" className='text-decoration-none text-dark fw-semibold dropdown-item'>Help</Link>
               <li className='dropdown-item'>LogOut</li>
               
             </ul>
