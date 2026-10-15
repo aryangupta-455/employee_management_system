@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'; 
 import './Home.css';
+import Footer from '../footer/Footer';
 
 export default function Home() { 
   return ( 
@@ -10,8 +11,8 @@ export default function Home() {
           <p className="col-md-8 fs-5 text-secondary"> 
             Manage employee information, organize records, and streamline your workforce management from one place. 
           </p>
-
-          <Link to="/addEmp" className="btn btn-primary btn-lg me-3"> Add Employee </Link>
+          
+          <Link to="/addEmp" className="btn btn-primary  btn-lg me-3"> Add Employee </Link>
           <Link to="/help" className="btn btn-outline-secondary btn-lg"> Get Help </Link> 
       </div> 
     </div>
@@ -50,5 +51,5 @@ export default function Home() {
       </div> 
     </div> 
   </div> 
-  ); 
+); 
 }

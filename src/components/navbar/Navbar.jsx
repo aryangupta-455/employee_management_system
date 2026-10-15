@@ -7,12 +7,17 @@ export default function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg d-flex flex-row">
         <div className="container-fluid">
-          <Link to="/" className='navbar-brand'>EMS</Link>
+          <Link to="/" className='navbar-brand'>
+            <h4 className="fw-bold mb-3">
+              Employee<span className="text-light">MS</span>
+            </h4>
+          </Link>
         
           <ul className= "navbar-nav mx-auto mb-2 mb-lg-0">
             <li className='nav-item btn btn-link text-decoration-none mx-2 text-light fw-semibold' onClick={() => navigate("/")}>Home</li>
             <li className='nav-item btn btn-link text-decoration-none mx-2 text-light fw-semibold' onClick={() => navigate("/about")}>AboutUs</li>
             <li className='nav-item btn btn-link text-decoration-none mx-2 text-light fw-semibold' onClick={() => navigate("/addEmp")}>Add Employee</li>
+            <li className='nav-item btn btn-link text-decoration-none mx-2 text-light fw-semibold' onClick={() => navigate("/showEmp")}>Show Employees</li>
           </ul>
 
           <div className="dropdown dropdown-image ms-auto">

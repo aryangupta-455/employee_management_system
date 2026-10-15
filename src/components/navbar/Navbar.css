@@ -9,6 +9,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: rgb(255, 89, 0);
+    z-index: 1050;
 }
 
 .dropdown-menu{

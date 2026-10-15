@@ -1,0 +1,11 @@
+.card {
+    border-radius: 12px;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+.form-control {
+    padding: 10px 12px;
+}
