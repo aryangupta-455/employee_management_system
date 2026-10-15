@@ -1,0 +1,20 @@
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 89, 0);
+}
+
+.dropdown-menu{
+
+    position: absolute;
+    box-sizing: border-box;
+    margin-top: 8px;
+}
+
