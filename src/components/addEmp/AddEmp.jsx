@@ -6,7 +6,6 @@ export default function AddEmp() {
   const [gender, setGender] = useState("");
   const [department, setDepartment] = useState("");
   const [emptype, setEmpType] = useState("");
-  const [contact, setContact] = useState("");
   const [email, setEmail] = useState("");
   const [salary, setSalary] = useState("");
   const [address, setAddress] = useState("");
@@ -16,7 +15,7 @@ export default function AddEmp() {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    if(!name || !age || !gender || !department || !emptype || !contact || !email || !salary || !address){
+    if(!name || !age || !gender || !department || !emptype  || !email || !salary || !address){
       setError(true);
     }
     else{
@@ -77,14 +76,6 @@ export default function AddEmp() {
                               placeholder="Ex:- Intern,Full Time, Contract..." 
                               value={emptype} 
                               onChange={(e) => setEmpType(e.target.value)}/>
-
-                      <label htmlFor="mobileno" className="form-label my-1 ">Contact</label>
-                      <input type="number" 
-                              className="form-control border-dark" 
-                              id = "mobileno" 
-                              placeholder="Enter your phone" 
-                              value={contact}
-                              onChange={(e) => setContact(e.target.value)}/>
 
                       <label htmlFor="emailaddress" className="form-label my-1 ">Email address </label>
                       <input type="email" 
