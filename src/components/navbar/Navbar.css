@@ -19,4 +19,11 @@
 
 }
 
-
+@media (min-width:992px){
+    #navbar_menu{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+    }
+}

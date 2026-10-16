@@ -1,0 +1,9 @@
+#login_card{
+    margin-bottom: 30vh;
+}
+
+@media (max-width: 990px){
+    #login_card{
+        margin-top: 50vh;
+    }
+}
