@@ -21,7 +21,7 @@ export default function Home() {
 
     <div className="row g-4"> 
       <div className="col-md-4"> 
-        <div className="card h-100 shadow-sm"> 
+        <div className="card card_home h-100 shadow-sm"> 
           <div className="card-body"> 
             <h5 className="card-title">Employee Records</h5> 
             <p className="card-text text-secondary"> Maintain employee information in an organized and accessible way. </p> 
@@ -31,7 +31,7 @@ export default function Home() {
       </div>
 
       <div className="col-md-4"> 
-        <div className="card h-100 shadow-sm"> 
+        <div className="card card_home h-100 shadow-sm"> 
           <div className="card-body"> 
             <h5 className="card-title">Update Information</h5> 
             <p className="card-text text-secondary"> Keep employee details accurate and up to date. </p> 
@@ -41,7 +41,7 @@ export default function Home() {
       </div>
 
       <div className="col-md-4"> 
-        <div className="card h-100 shadow-sm"> 
+        <div className="card card_home h-100 shadow-sm"> 
           <div className="card-body"> 
             <h5 className="card-title">About Our System</h5> 
             <p className="card-text text-secondary"> Learn more about the system and how it helps simplify employee management. </p> 

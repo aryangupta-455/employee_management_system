@@ -3,7 +3,8 @@
     box-shadow 0.2s ease; 
 }
 
-.card:hover { 
+
+.card_home:hover { 
     transform: translateY(-4px); 
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); 
 }

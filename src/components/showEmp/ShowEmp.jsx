@@ -1,17 +1,34 @@
 import {useState, useEffect} from'react'
-import Services from '../services/Services'
+import CRUD_OP from '../services/Services'
+import { useNavigate } from "react-router-dom";
 import './showEmp.css';
 
 export default function ShowEmp() {
 
+  const navigate = useNavigate();
   const[employee, setEmployee] = useState([]);
 
-  useEffect (() => {
-        async function fetchEmployees(){
-          const data = await Services();
-          setEmployee(data);
-        }fetchEmployees();
-    },[]) 
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await CRUD_OP.getEmployees();
+                setEmployee(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+            } catch (err) {
+                console.log(err);
+            }
+        };
+        fetchData();
+    }, []);
+
+
+  const handleDelete = async (empId) => {
+    try{
+      await CRUD_OP.deleteEmployee(empId);
+      setEmployee((prev) => prev.filter((emp) => emp.id !== empId));
+    }catch(err){
+      console.log(err);
+    }
+  }
 
   return (
     <div>
@@ -47,8 +64,8 @@ export default function ShowEmp() {
                   <td> {emp.salary}</td>
                   <td> {emp.address}</td>
                   <div>
-                    <button className='btn btn-warning me-1' type='button'>Update</button>
-                    <button className='btn btn-danger' type='button' onClick={handleDelete()}>Delete</button> 
+                    <button className='btn btn-warning me-1' type='button' onClick={() => navigate("/updateEmp" , {state: emp})}>Update</button>
+                    <button className='btn btn-danger' type='button' onClick={() => handleDelete()}>Delete</button> 
                   </div>
                 </tr>))}
             </tbody>

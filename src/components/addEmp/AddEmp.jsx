@@ -1,4 +1,5 @@
 import './addEmp.css'
+import CRUD_OP from '../services/Services';
 import { useState } from 'react';
 export default function AddEmp() {
   const [name, setName] = useState("");
@@ -11,30 +12,40 @@ export default function AddEmp() {
   const [address, setAddress] = useState("");
 
   const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
+    setSuccess(false);
     if(!name || !age || !gender || !department || !emptype  || !email || !salary || !address){
       setError(true);
+      return;
     }
-    else{
-      setError(false);
-    }
-  }
+    setError(false);
+
+    const employeeData = {name,age,gender,email,emptype,department,salary,address};
+      
+    try{
+        await CRUD_OP.addEmployee(employeeData);
+        setSuccess(true);
+      }catch(err){
+        console.log("Failed to add Employee: ", err);
+        setError(true);
+      }
+    };
 
   return (
     <div>
       <div className="container py-5 ">
         <div className="row justify-content-center">
               {error && (
-                <div className="card bg-danger text-white p-2 text-center">
-                  <p className='mb-0'>Please fill all the fields...</p>
+                <div className="card bg-danger text-white p-2 text-center mb-3">
+                  <p className='card-text'>Please fill all the fields...</p>
                 </div>)}
           <div className="col-12 col-md-8 col-lg-6">
-            <div className="card shadow-sm border-0">
+            <div className="card shadow-sm border border-dark">
                 
-                <div className="card-body p-4">
+                <div className="card-body p-4 ">
                     <h3 className="text-center mb-4">Add Employee</h3>
                     <form onSubmit={handleSubmit} action="">
                       <label htmlFor="name" className="form-label my-1 ">Name</label>
@@ -49,7 +60,7 @@ export default function AddEmp() {
                       <input type="text" 
                       className="form-control border-dark" 
                       id = "age" 
-                      placeholder="Enter your age" 
+                      placeholder="Enter the age" 
                       value={age} 
                       onChange={(e) => setAge(e.target.value)}/>
 
@@ -86,7 +97,7 @@ export default function AddEmp() {
                               onChange={(e) => setEmail(e.target.value)}/>
 
                       <label htmlFor="salary" className="form-label my-1 ">Salary</label>
-                      <input type="number" 
+                      <input type="text" 
                               className="form-control border-dark" 
                               id = "salary" 
                               placeholder="Enter your salary" 
@@ -97,13 +108,16 @@ export default function AddEmp() {
                       <input type="text" 
                               className="form-control border-dark" 
                               id = "address" 
-                              placeholder="Enter your address" v
-                              alue={address} 
+                              placeholder="Enter your address" 
+                              value={address} 
                               onChange={(e) => setAddress(e.target.value)}/>
 
                       <button className="btn btn-primary p-2 my-3" type='submit' >Add Employee</button>
                     </form>
                 </div>
+                {success && <div className="card bg-danger text-white p-2 text-center mb-3">
+                  <p className='card-text'>Employee added successfully...</p>
+                </div>}
 
             </div>
           </div>
