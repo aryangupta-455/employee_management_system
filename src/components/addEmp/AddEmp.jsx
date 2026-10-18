@@ -50,7 +50,7 @@ export default function AddEmp() {
                     <form onSubmit={handleSubmit} action="">
                       <label htmlFor="name" className="form-label my-1 ">Name</label>
                       <input type="text" 
-                             className="form-control border-dark" 
+                             className="form-control  " 
                              id = "name" 
                              placeholder="Enter your name" 
                              value={name} 
@@ -58,7 +58,7 @@ export default function AddEmp() {
 
                       <label htmlFor="age" className="form-label my-1 ">Age</label>
                       <input type="text" 
-                      className="form-control border-dark" 
+                      className="form-control  " 
                       id = "age" 
                       placeholder="Enter the age" 
                       value={age} 
@@ -66,7 +66,7 @@ export default function AddEmp() {
 
                       <label htmlFor="gender" className="form-label my-1 ">Gender</label>
                       <input type="text" 
-                      className="form-control border-dark" 
+                      className="form-control  " 
                       id = "gender" 
                       placeholder="Enter your gender" 
                       value={gender} 
@@ -74,7 +74,7 @@ export default function AddEmp() {
 
                       <label htmlFor="department" className="form-label my-1 ">Department</label>
                       <input type="text" 
-                             className="form-control border-dark" 
+                             className="form-control  " 
                              id = "department" 
                              placeholder="Enter your department" 
                              value={department} 
@@ -82,7 +82,7 @@ export default function AddEmp() {
 
                       <label htmlFor="employeetype" className="form-label my-1 ">Employee-Type</label>
                       <input type="text" 
-                              className="form-control border-dark" 
+                              className="form-control  " 
                               id = "employeetype" 
                               placeholder="Ex:- Intern,Full Time, Contract..." 
                               value={emptype} 
@@ -90,7 +90,7 @@ export default function AddEmp() {
 
                       <label htmlFor="emailaddress" className="form-label my-1 ">Email address </label>
                       <input type="email" 
-                              className="form-control border-dark" 
+                              className="form-control  " 
                               id = "emailaddress" 
                               placeholder="example@gmail.com" 
                               value={email} 
@@ -98,19 +98,23 @@ export default function AddEmp() {
 
                       <label htmlFor="salary" className="form-label my-1 ">Salary</label>
                       <input type="text" 
-                              className="form-control border-dark" 
+                              className="form-control  " 
                               id = "salary" 
                               placeholder="Enter your salary" 
                               value={salary} 
                               onChange={(e) => setSalary(e.target.value)}/>
 
                       <label htmlFor="address" className="form-label my-1 ">Address</label>
-                      <input type="text" 
-                              className="form-control border-dark" 
-                              id = "address" 
-                              placeholder="Enter your address" 
-                              value={address} 
-                              onChange={(e) => setAddress(e.target.value)}/>
+                      <textarea
+                            className="form-control"
+                            id="address"
+                            name="address"
+                            rows="3"
+                            value={address}
+                            onChange={(e) => setAddress(e.target.value)}
+                            placeholder="Enter employee address"
+                            style={{ padding: "10px" }}
+                        ></textarea>
 
                       <button className="btn btn-primary p-2 my-3" type='submit' >Add Employee</button>
                     </form>
