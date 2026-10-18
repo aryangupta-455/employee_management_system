@@ -33,7 +33,7 @@ export default function ShowEmp() {
   return (
     <div>
       <div className='showEmp my-5'>
-        <h2 className='my-1 border border-dark rounded'>Employees List</h2>
+        <h2 className='my-1 rounded'>Employees List</h2>
         <div className="table-container">
           <table className='emp-table rounded'>
             <thead>
