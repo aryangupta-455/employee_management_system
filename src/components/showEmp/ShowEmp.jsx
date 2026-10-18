@@ -63,10 +63,8 @@ export default function ShowEmp() {
                   <td> {emp.department}</td>
                   <td> {emp.salary}</td>
                   <td> {emp.address}</td>
-                  <div>
-                    <button className='btn btn-warning me-1' type='button' onClick={() => navigate("/updateEmp" , {state: emp})}>Update</button>
-                    <button className='btn btn-danger' type='button' onClick={() => handleDelete()}>Delete</button> 
-                  </div>
+                  <button className='btn btn-warning me-1' type='button' onClick={() => navigate("/updateEmp" , {state: emp})}>Update</button>
+                  <button className='btn btn-danger' type='button' onClick={() => handleDelete(emp.id)}>Delete</button> 
                 </tr>))}
             </tbody>
           </table>

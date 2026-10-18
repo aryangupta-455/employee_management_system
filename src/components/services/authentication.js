@@ -20,9 +20,10 @@ export const loginUser = async (email,password) => {
     try {
         const userCredential = await signInWithEmailAndPassword(auth, email, password)
         const user = userCredential.user;
-        return user.reloadUserInfo.email;
+        return user;
+        // return user.reloadUserInfo.email;
     } catch (error) {
-        console.log(error);
+        throw error;
     }
 }
 

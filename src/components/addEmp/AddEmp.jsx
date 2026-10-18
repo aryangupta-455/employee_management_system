@@ -115,7 +115,7 @@ export default function AddEmp() {
                       <button className="btn btn-primary p-2 my-3" type='submit' >Add Employee</button>
                     </form>
                 </div>
-                {success && <div className="card bg-danger text-white p-2 text-center mb-3">
+                {success && <div className="card bg-warning text-white p-2 text-center mb-3">
                   <p className='card-text'>Employee added successfully...</p>
                 </div>}
 
