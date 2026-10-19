@@ -3,10 +3,10 @@
 A web application for managing employee records. Authenticated users can add, view, update, and delete employees. The frontend is built with React and Vite, and Firebase provides authentication and the database.
 
 **Live Demo:** [https://myemsproject-d8b9d.web.app](https://myemsproject-d8b9d.web.app)
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
+<img width="1897" height="872" alt="image" src="https://github.com/user-attachments/assets/a80bde04-05e4-4723-953b-96fad7cbc458" />
+<img width="1890" height="867" alt="image" src="https://github.com/user-attachments/assets/9f109d18-a8bc-4455-b7a9-e2789088523e" />
+<img width="1917" height="515" alt="image" src="https://github.com/user-attachments/assets/8fff482d-5bf4-4b33-befd-ee74dde85fd2" />
+<img width="1882" height="876" alt="image" src="https://github.com/user-attachments/assets/1546f54b-a894-456b-90e9-a2ed1d245939" />
 <!-- Add 2-3 screenshots here: login page, employee table, add/edit form -->
 
 ## Features
